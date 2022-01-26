@@ -459,6 +459,10 @@ img {
 }
 
 /* custom */
+
+
+
+
 .section-title-custom > span {
   font-size: 18px;
   font-size: 1.2rem;
@@ -1480,6 +1484,15 @@ img {
   /*navbar collaps less then 992px*/
 }
 
+/* custom */
+
+.navbar-brand img {
+  max-width: 30%;
+  max-height: 50px;
+}
+
+/* custom */
+
 .site-header .navigation {
   background-color: #fff;
   margin-bottom: 0;
@@ -1505,7 +1518,7 @@ img {
 
 @media (max-width: 767px) {
   .site-header .navigation .navbar-brand img ,h3 {
-    max-width: 800px;
+    max-width: 80px;
     font-size: 15px;
   }
 }

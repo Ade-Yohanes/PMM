@@ -36,7 +36,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=" {{ '/' }} "><img src="assets/images/LogoPM-3.png" alt>
+                    
+                    <a class="navbar-brand" href=" {{ '/' }} "><img src="{{ Voyager::image( setting('site.logo') ) }}" alt>
+
+                    {{-- <a class="navbar-brand" href=" {{ '/' }} "><img src="assets/images/LogoPM-3.png" alt> --}}
+
+
+
                         
                         <h4> <span> PRAJA MITRA MANDIRI </span>  </h5>
                     </a>
