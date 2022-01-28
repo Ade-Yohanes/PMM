@@ -12,6 +12,7 @@ use App\Service;
 class ServiceComposer
 {
     
+
     /**
      * Bind data to the view.
      *
@@ -23,15 +24,15 @@ class ServiceComposer
 
         // $service = Service::with(['category'])->get();
     
-        // $view->with('service', $service );
 
-        $view->with('service', Service::with(['category'])->get());
+        // $view->with('service', Service::with(['category'])->get());
+
+        $view->with('service', Service::all());
+        
         
         // $view->with('service', Service::with( [ 'nama_pelayanan', 'category_id.name_category' ] )->get() );
 
         
-
-
 
 
         // $client = Client::all();

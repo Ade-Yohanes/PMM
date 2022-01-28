@@ -52,7 +52,7 @@
 
                 <div class="col col-sm-3 col-sm-6">
                     <div class="widget services-widget">
-                        <h3>Feature</h3>
+                        <h3>About</h3>
                         <ul>
                            
                             <li><a href=" {{ '/' }}"><i class="fa fa-angle-right"></i> Home</a></li>

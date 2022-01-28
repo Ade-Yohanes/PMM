@@ -53,7 +53,18 @@ class AppServiceProvider extends ServiceProvider
         View::composer(
             ['home','about', 'service','site-footer','nav'],
             ServiceComposer::class
+            // 'App\Http\View\Composers\ServiceComposer';
+
         );
+
+        View::composer(
+            ['site-footer','nav'],
+            ServiceComposer::class
+            // 'App\Http\View\Composers\ServiceComposer';
+
+        );
+
+        
 
         // View::composer(
         //     ['site-footer' ],

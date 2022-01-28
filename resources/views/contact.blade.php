@@ -75,8 +75,8 @@
                             <label for="f-name">Nama</label>
                             <input type="text" class="form-control" id="f-name" name="nama" value="{{ old('nama') }}" >
 
-                            @if ($errors->has('name'))
-                                <span class="text-danger">{{ $errors->first('name') }}</span>
+                            @if ($errors->has('nama'))
+                                <span class="text-danger">{{ $errors->first('nama') }}</span>
                             @endif
 
                         </div>
@@ -117,6 +117,7 @@
                               <option value="kereta" >Kereta</option>
 
                             </select>
+                           
                           </div>
 
                         {{-- <div class="col col-sm-6">
@@ -127,11 +128,17 @@
                         <div class="form-group col col-sm-6 ">
                             <label for="exampleFormControlFile1">Lampiran</label>
                             <input type="file" class="form-control" id="exampleFormControlFile1" name="lampiran" value="{{ old('lampiran') }}">
+                            @if ($errors->has('lampiran'))
+                            <span class="text-danger">{{ $errors->first('lampiran') }}</span>
+                        @endif
                           </div>
 
                         <div class="col col-xs-12">
-                            <label for="message"  name="pesan" >Message</label>
+                            <label for="message"  >Message</label>
                             <textarea id="message" name="pesan" class="form-control" value="{{ old('pesan') }}"></textarea>
+                            @if ($errors->has('pesan'))
+                            <span class="text-danger">{{ $errors->first('pesan') }}</span>
+                        @endif
                         </div>
                         <div class="col col-xs-12">
                             <div class="submit-btn">

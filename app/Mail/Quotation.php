@@ -29,17 +29,17 @@ class Quotation extends Mailable
     public function build()
     {
 
-        $file = \Storage::path($this->payment->photo);
+        // $file = \Storage::path($this->payment->photo);
 
-        return $this->from('mail@gmail.com')
-                    ->markdown('emails.payment')
-                    ->with([
-                        'name'          => $this->payment->name,
-                        'amount'        => $this->payment->amount,
-                        'bank'          => $this->payment->bank,
-                        'transfer_date' => $this->payment->transfer_date
-                    ])
-                    ->attach($file);
+        // return $this->from('mail@gmail.com')
+        //             ->markdown('emails.payment')
+        //             ->with([
+        //                 'name'          => $this->payment->name,
+        //                 'amount'        => $this->payment->amount,
+        //                 'bank'          => $this->payment->bank,
+        //                 'transfer_date' => $this->payment->transfer_date
+        //             ])
+        //             ->attach($file);
     
 
 

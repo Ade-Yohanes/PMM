@@ -47,9 +47,9 @@ Route::get('/service', [ FrontendController::class, 'service' ] );
 
 Route::get('/contact', [ QuoteController::class, 'contact' ] ) ;
 
-Route::post('/contact/store', [ QuoteController::class, 'quote_store' ] ) ;
+Route::post('/contact/store', [ QuoteController::class, 'store' ] ) ;
 
-Route::post('/contact', ['as'=>'contact.store','uses'=>'QuoteController@contactPost']);
+// Route::post('/contact', ['as'=>'contact.store','uses'=>'QuoteController@contactPost']);
 
 
 
