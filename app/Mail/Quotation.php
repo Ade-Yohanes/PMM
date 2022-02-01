@@ -16,9 +16,9 @@ class Quotation extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->user = $data;
     }
 
     /**
@@ -29,22 +29,19 @@ class Quotation extends Mailable
     public function build()
     {
 
-        // $file = \Storage::path($this->payment->photo);
-
-        // return $this->from('mail@gmail.com')
-        //             ->markdown('emails.payment')
-        //             ->with([
-        //                 'name'          => $this->payment->name,
-        //                 'amount'        => $this->payment->amount,
-        //                 'bank'          => $this->payment->bank,
-        //                 'transfer_date' => $this->payment->transfer_date
-        //             ])
-        //             ->attach($file);
-    
-
-
-        // return $this->markdown('emails.quotationMail');
-
-
+        
+        return $this->from('dont-reply@prajamitramandiri.com')
+                ->markdown('emails.quotationMail')
+                ->attachFromStorage($this->user['lampiran'])
+                ->with([
+                        'nama' => $this->user['nama'],
+                        'email' => $this->user['email'],
+                        'perusahaan' => $this->user['perusahaan'],
+                        'phone' => $this->user['phone'],
+                        'service' => $this->user['service'],
+                        // 'lampiran' => $this->user['lampiran'],
+                        'pesan' => $this->user['pesan']
+                    ]);
     }
+    
 }
